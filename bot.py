@@ -17,7 +17,7 @@ creds = ServiceAccountCredentials.from_json_keyfile_dict(creds_json, scope)
 client = gspread.authorize(creds)
 
 # Подключаемся к таблице
-sheet = client.open("Предсказания").sheet1
+sheet = client.open("predictions").sheet1
 
 # --- команды ---
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
@@ -38,3 +38,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
