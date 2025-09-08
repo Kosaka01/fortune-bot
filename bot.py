@@ -3,6 +3,8 @@ import logging
 from telegram import Update
 from telegram.ext import Application, CommandHandler, ContextTypes
 import gspread
+import json
+import os
 from oauth2client.service_account import ServiceAccountCredentials
 
 logging.basicConfig(level=logging.INFO)
@@ -37,4 +39,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
