@@ -26,7 +26,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
 async def predict(update: Update, context: ContextTypes.DEFAULT_TYPE):
     predictions = sheet.col_values(1)[1:]  # пропускаем заголовок
     if predictions:
-        await update.message.reply_text(f"🔮 {random.choice(predictions)}")
+        await update.message.reply_text(f"{random.choice(predictions)}")
     else:
         await update.message.reply_text("Увы, предсказаний пока нет 😢")
 
@@ -38,4 +38,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
